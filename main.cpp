@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "inc/bfs.h"
+#include "inc/dfs.h"
 #include "inc/graph.h"
 
 int main(int argc, char *argv[]) {
@@ -28,11 +29,12 @@ int main(int argc, char *argv[]) {
 
     bfs::getInstance().initialize(g);
     bfs::getInstance().dobfs(g, 1);
-    bfs::getInstance().find_path(1, 4);
-    bfs::getInstance().find_path(1, 3);
+    //bfs::getInstance().find_path(1, 4);
+    //bfs::getInstance().find_path(1, 3);
 
-    bfs::getInstance().initialize(g);
-    bfs::getInstance().connected_components(g);
-
+    //bfs::getInstance().initialize(g);
+    //bfs::getInstance().connected_components(g);
+    dfs::getInstance().initialize(g);
+    dfs::getInstance().dodfs(g, 1);
     return 0;
 }

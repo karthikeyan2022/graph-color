@@ -24,9 +24,7 @@ void bfs::dobfs(graph *G, int start) {
 
     std::cout << "Starting BFS on Graph" << std::endl;
     //initialize(G);
-
     int u, v;
-    node* p;
 
     bfsqueue.push(start);
     visited[start] = true;
@@ -55,29 +53,9 @@ void bfs::dobfs(graph *G, int start) {
                 parent[v] = u;
             }
         }
-
-        /*
-        while (p != nullptr) {
-            v = p->v;
-
-            if (done[v] == false || G->directed) {
-                std::cout << "Edge: " << u << "->" << v << std::endl;
-            }
-
-            if (visited[v] == false) {
-                bfsqueue.push(v);
-                visited[v] = true;
-                parent[v] = u;
-            }
-
-            p = p->next;
-        } */
-
     }
 
     print_parentarray(G);
-
-
 }
 
 void bfs::print_parentarray(const graph* G) const {
@@ -99,7 +77,6 @@ void bfs::print_parentarray(const graph* G) const {
 void bfs::find_path(int start, int end, bool isStart) {
 
     if (start == end) {
-
         std::cout << "Path found: ";
         std::cout << start << " -> ";
     }

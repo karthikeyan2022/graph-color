@@ -7,6 +7,8 @@ add_executable(graph_color main.cpp
         src/graph.cpp
         inc/graph.h
         src/bfs.cpp
-        inc/bfs.h)
+        inc/bfs.h
+        inc/dfs.h
+        src/dfs.cpp)
 
 file(COPY ${CMAKE_SOURCE_DIR}/input DESTINATION ${CMAKE_BINARY_DIR})

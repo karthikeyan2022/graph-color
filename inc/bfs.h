@@ -18,7 +18,7 @@ private:
     bool visited[MAXV+1];            /* which vertices have been found */
     int parent[MAXV+1];                 /* discovery relation */
     std::queue<int> bfsqueue;           // queue of vertex int
-
+    void print_parentarray(const graph* G) const; // private function called in dobfs
 
 
 public:
@@ -28,7 +28,7 @@ public:
     }
     void initialize(const graph* G);
     void dobfs(graph* G, int start);
-    void print_parentarray(const graph* G) const;
+
     void find_path(int start, int end, bool isStart = true);
     void connected_components(graph *G);
 
